@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Anime World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section reviews-hero">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>✨ Anime World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#anime">Top Anime</a></li>
+                <li><a href="index.html#characters">Characters</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Anime Reviews</h1>
+            <p class="hero-subtitle">In-Depth Analysis & Ratings</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search anime reviews..." id="searchInput">
+                <button onclick="searchReviews()">🔍</button>
+            </div>
+        </div>
+        
+        <div class="floating-elements">
+            <div class="star star-1">📝</div>
+            <div class="star star-2">⭐</div>
+            <div class="star star-3">🎯</div>
+            <div class="star star-4">💫</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="reviews-section">
+            <div class="container">
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterReviews('all')">All Reviews</button>
+                    <button class="filter-btn" onclick="filterReviews('action')">Action</button>
+                    <button class="filter-btn" onclick="filterReviews('drama')">Drama</button>
+                    <button class="filter-btn" onclick="filterReviews('adventure')">Adventure</button>
+                    <button class="filter-btn" onclick="filterReviews('fantasy')">Fantasy</button>
+                </div>
+
+                <!-- Reviews Grid -->
+                <div class="reviews-grid" id="reviewsGrid">
+                    
+                    <!-- Attack on Titan Review -->
+                    <div class="review-card" data-genre="action">
+                        <div class="review-header">
+                            <div class="anime-emoji">⚔️</div>
+                            <div class="review-info">
+                                <h3>Attack on Titan</h3>
+                                <div class="review-meta">
+                                    <span class="genre-tag action">Action</span>
+                                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="score-section">
+                                <div class="score-item">
+                                    <span class="score-label">Animation</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 95%"></div>
+                                    </div>
+                                    <span class="score-value">9.5/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Story</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 98%"></div>
+                                    </div>
+                                    <span class="score-value">9.8/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Characters</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 92%"></div>
+                                    </div>
+                                    <span class="score-value">9.2/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Music</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 90%"></div>
+                                    </div>
+                                    <span class="score-value">9.0/10</span>
+                                </div>
+                            </div>
+                            <div class="review-text">
+                                <p><strong>Epic Masterpiece!</strong> Attack on Titan delivers one of the most compelling stories in anime history. The animation quality is absolutely stunning, with fluid 3D maneuver gear sequences that will leave you breathless.</p>
+                                <p>The character development is phenomenal - watching Eren's transformation from a naive boy to a complex anti-hero is both heartbreaking and fascinating. The plot twists are mind-blowing, and the world-building is incredibly detailed.</p>
+                                <p><strong>Verdict:</strong> A must-watch for any anime fan. The final season delivers an emotionally devastating yet satisfying conclusion to this epic saga.</p>
+                            </div>
+                            <div class="review-footer">
+                                <span class="reviewer">Reviewed by: Cyber Otaku</span>
+                                <span class="review-date">2024-01-15</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demon Slayer Review -->
+                    <div class="review-card" data-genre="action">
+                        <div class="review-header">
+                            <div class="anime-emoji">🗡️</div>
+                            <div class="review-info">
+                                <h3>Demon Slayer</h3>
+                                <div class="review-meta">
+                                    <span class="genre-tag action">Action</span>
+                                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="score-section">
+                                <div class="score-item">
+                                    <span class="score-label">Animation</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 100%"></div>
+                                    </div>
+                                    <span class="score-value">10/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Story</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 85%"></div>
+                                    </div>
+                                    <span class="score-value">8.5/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Characters</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 88%"></div>
+                                    </div>
+                                    <span class="score-value">8.8/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Music</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 95%"></div>
+                                    </div>
+                                    <span class="score-value">9.5/10</span>
+                                </div>
+                            </div>
+                            <div class="review-text">
+                                <p><strong>Visual Spectacle!</strong> Demon Slayer sets a new standard for animation quality in anime. The fight scenes are absolutely breathtaking, with water effects that look more realistic than real water!</p>
+                                <p>Tanjiro's journey from a simple coal seller to a demon slayer is emotionally compelling. The relationship between Tanjiro and Nezuko is heartwarming, and the supporting cast brings great depth to the story.</p>
+                                <p><strong>Verdict:</strong> While the story is relatively simple, the animation and emotional moments make this a must-watch. The Entertainment District arc is pure perfection!</p>
+                            </div>
+                            <div class="review-footer">
+                                <span class="reviewer">Reviewed by: Neon Ninja</span>
+                                <span class="review-date">2024-01-10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- One Piece Review -->
+                    <div class="review-card" data-genre="adventure">
+                        <div class="review-header">
+                            <div class="anime-emoji">🏴‍☠️</div>
+                            <div class="review-info">
+                                <h3>One Piece</h3>
+                                <div class="review-meta">
+                                    <span class="genre-tag adventure">Adventure</span>
+                                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="score-section">
+                                <div class="score-item">
+                                    <span class="score-label">Animation</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 80%"></div>
+                                    </div>
+                                    <span class="score-value">8.0/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Story</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 98%"></div>
+                                    </div>
+                                    <span class="score-value">9.8/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Characters</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 100%"></div>
+                                    </div>
+                                    <span class="score-value">10/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Music</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 92%"></div>
+                                    </div>
+                                    <span class="score-value">9.2/10</span>
+                                </div>
+                            </div>
+                            <div class="review-text">
+                                <p><strong>Epic Adventure!</strong> One Piece is the ultimate adventure story with over 1000 episodes of pure entertainment. Luffy's journey to become Pirate King is filled with unforgettable moments and incredible world-building.</p>
+                                <p>The Straw Hat crew has some of the most well-developed characters in anime history. Each member has their own compelling backstory and unique personality. The world of One Piece is incredibly detailed and imaginative.</p>
+                                <p><strong>Verdict:</strong> Despite its length, One Piece never gets boring. The Wano Country arc showcases some of the best animation and storytelling in the series. A true masterpiece!</p>
+                            </div>
+                            <div class="review-footer">
+                                <span class="reviewer">Reviewed by: Digital Sensei</span>
+                                <span class="review-date">2024-01-08</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Naruto Review -->
+                    <div class="review-card" data-genre="action">
+                        <div class="review-header">
+                            <div class="anime-emoji">🥷</div>
+                            <div class="review-info">
+                                <h3>Naruto</h3>
+                                <div class="review-meta">
+                                    <span class="genre-tag action">Action</span>
+                                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="score-section">
+                                <div class="score-item">
+                                    <span class="score-label">Animation</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 85%"></div>
+                                    </div>
+                                    <span class="score-value">8.5/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Story</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 90%"></div>
+                                    </div>
+                                    <span class="score-value">9.0/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Characters</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 95%"></div>
+                                    </div>
+                                    <span class="score-value">9.5/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Music</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 88%"></div>
+                                    </div>
+                                    <span class="score-value">8.8/10</span>
+                                </div>
+                            </div>
+                            <div class="review-text">
+                                <p><strong>Classic Shonen!</strong> Naruto defined a generation of anime fans with its incredible character development and emotional storytelling. Watching Naruto grow from a lonely orphan to Hokage is truly inspiring.</p>
+                                <p>The ninja world is incredibly detailed, and the jutsu system is well thought out. The character relationships are complex and meaningful, especially the rivalry between Naruto and Sasuke.</p>
+                                <p><strong>Verdict:</strong> Despite some filler episodes, Naruto remains a timeless classic. The Pain arc and the final battle are some of the most epic moments in anime history!</p>
+                            </div>
+                            <div class="review-footer">
+                                <span class="reviewer">Reviewed by: Cyber Otaku</span>
+                                <span class="review-date">2024-01-05</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- My Hero Academia Review -->
+                    <div class="review-card" data-genre="action">
+                        <div class="review-header">
+                            <div class="anime-emoji">🦸</div>
+                            <div class="review-info">
+                                <h3>My Hero Academia</h3>
+                                <div class="review-meta">
+                                    <span class="genre-tag action">Action</span>
+                                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="score-section">
+                                <div class="score-item">
+                                    <span class="score-label">Animation</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 92%"></div>
+                                    </div>
+                                    <span class="score-value">9.2/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Story</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 88%"></div>
+                                    </div>
+                                    <span class="score-value">8.8/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Characters</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 90%"></div>
+                                    </div>
+                                    <span class="score-value">9.0/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Music</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 85%"></div>
+                                    </div>
+                                    <span class="score-value">8.5/10</span>
+                                </div>
+                            </div>
+                            <div class="review-text">
+                                <p><strong>Superhero Excellence!</strong> My Hero Academia brings the superhero genre to anime with incredible style. Deku's journey from quirkless to the world's greatest hero is both inspiring and emotional.</p>
+                                <p>The class 1-A characters are all unique and well-developed. The fight scenes are dynamic and creative, especially the sports festival arc. The villains are complex and compelling.</p>
+                                <p><strong>Verdict:</strong> A perfect blend of action, comedy, and drama. The War arc showcases some of the most intense battles in recent anime. Plus Ultra!</p>
+                            </div>
+                            <div class="review-footer">
+                                <span class="reviewer">Reviewed by: Neon Ninja</span>
+                                <span class="review-date">2024-01-03</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spirited Away Review -->
+                    <div class="review-card" data-genre="fantasy">
+                        <div class="review-header">
+                            <div class="anime-emoji">🐉</div>
+                            <div class="review-info">
+                                <h3>Spirited Away</h3>
+                                <div class="review-meta">
+                                    <span class="genre-tag fantasy">Fantasy</span>
+                                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="score-section">
+                                <div class="score-item">
+                                    <span class="score-label">Animation</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 100%"></div>
+                                    </div>
+                                    <span class="score-value">10/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Story</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 95%"></div>
+                                    </div>
+                                    <span class="score-value">9.5/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Characters</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 92%"></div>
+                                    </div>
+                                    <span class="score-value">9.2/10</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-label">Music</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 98%"></div>
+                                    </div>
+                                    <span class="score-value">9.8/10</span>
+                                </div>
+                            </div>
+                            <div class="review-text">
+                                <p><strong>Studio Ghibli Masterpiece!</strong> Spirited Away is a magical journey through a beautifully crafted fantasy world. The animation is absolutely stunning, with every frame being a work of art.</p>
+                                <p>Chihiro's character development from a spoiled child to a brave and selfless girl is beautifully portrayed. The spirit world is incredibly imaginative, filled with unique creatures and memorable characters.</p>
+                                <p><strong>Verdict:</strong> A timeless classic that appeals to all ages. The story teaches valuable lessons about courage, friendship, and growing up. Pure cinematic magic!</p>
+                            </div>
+                            <div class="review-footer">
+                                <span class="reviewer">Reviewed by: Digital Sensei</span>
+                                <span class="review-date">2024-01-01</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>🌟 Anime World</h3>
+            <p>Made with ❤️ for anime lovers everywhere</p>
+            <div class="social-links">
+                <a href="#" onclick="shareAnime()">📱 Share</a>
+                <a href="#" onclick="joinCommunity()">👥 Community</a>
+                <a href="contact.html">📧 Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Filter reviews by genre
+        function filterReviews(genre) {
+            const cards = document.querySelectorAll('.review-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                if (genre === 'all' || card.dataset.genre === genre) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.5s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Search functionality
+        function searchReviews() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.review-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const text = card.querySelector('.review-text').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || text.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.5s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Add search on enter key
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchReviews();
+            }
+        });
+
+        // Add custom styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .reviews-hero {
+                height: 60vh;
+                background: 
+                    radial-gradient(ellipse at 20% 30%, rgba(0, 245, 255, 0.15) 0%, transparent 50%),
+                    radial-gradient(ellipse at 80% 70%, rgba(255, 0, 128, 0.15) 0%, transparent 50%);
+            }
+            
+            .search-bar {
+                display: flex;
+                justify-content: center;
+                margin-top: 2rem;
+                gap: 1rem;
+            }
+            
+            .search-bar input {
+                background: rgba(255, 255, 255, 0.1);
+                border: 2px solid var(--cyber-blue);
+                color: var(--text-light);
+                padding: 1rem 1.5rem;
+                border-radius: 0;
+                font-size: 1rem;
+                width: 300px;
+                backdrop-filter: blur(10px);
+                box-shadow: var(--glow-blue);
+            }
+            
+            .search-bar input::placeholder {
+                color: rgba(224, 224, 255, 0.6);
+            }
+            
+            .search-bar button {
+                background: var(--cyber-blue);
+                border: 2px solid var(--cyber-blue);
+                color: var(--dark-navy);
+                padding: 1rem 1.5rem;
+                border-radius: 0;
+                cursor: pointer;
+                font-size: 1rem;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                box-shadow: var(--glow-blue);
+            }
+            
+            .search-bar button:hover {
+                background: transparent;
+                color: var(--cyber-blue);
+                transform: translateY(-2px);
+            }
+            
+            .reviews-section {
+                padding: 5rem 2rem;
+                background: var(--dark-navy);
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .filter-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-bottom: 3rem;
+                flex-wrap: wrap;
+            }
+            
+            .filter-btn {
+                background: transparent;
+                border: 2px solid var(--cyber-blue);
+                color: var(--cyber-blue);
+                padding: 0.8rem 1.5rem;
+                border-radius: 0;
+                cursor: pointer;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all 0.3s ease;
+            }
+            
+            .filter-btn:hover,
+            .filter-btn.active {
+                background: var(--cyber-blue);
+                color: var(--dark-navy);
+                box-shadow: var(--glow-blue);
+                transform: translateY(-2px);
+            }
+            
+            .reviews-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+                gap: 2rem;
+            }
+            
+            .review-card {
+                background: var(--gradient-card);
+                border-radius: 20px;
+                padding: 2rem;
+                border: 2px solid transparent;
+                transition: all 0.4s ease;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .review-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--gradient-main);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: -1;
+            }
+            
+            .review-card:hover {
+                transform: translateY(-10px);
+                border-color: var(--cyber-blue);
+                box-shadow: var(--glow-blue);
+            }
+            
+            .review-card:hover::before {
+                opacity: 0.05;
+            }
+            
+            .review-header {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .anime-emoji {
+                font-size: 3rem;
+                text-shadow: var(--glow-pink);
+                animation: iconPulse 3s ease-in-out infinite;
+            }
+            
+            .review-info h3 {
+                font-family: 'Orbitron', monospace;
+                font-size: 1.5rem;
+                color: var(--cyber-blue);
+                text-shadow: 0 0 10px var(--cyber-blue);
+                margin-bottom: 0.5rem;
+            }
+            
+            .review-meta {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .genre-tag {
+                padding: 0.3rem 0.8rem;
+                border-radius: 15px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .genre-tag.action {
+                background: rgba(255, 0, 128, 0.2);
+                color: var(--neon-pink);
+                border: 1px solid var(--neon-pink);
+            }
+            
+            .genre-tag.adventure {
+                background: rgba(0, 245, 255, 0.2);
+                color: var(--cyber-blue);
+                border: 1px solid var(--cyber-blue);
+            }
+            
+            .genre-tag.fantasy {
+                background: rgba(57, 255, 20, 0.2);
+                color: var(--electric-green);
+                border: 1px solid var(--electric-green);
+            }
+            
+            .rating {
+                font-size: 1.2rem;
+                text-shadow: var(--glow-pink);
+            }
+            
+            .score-section {
+                margin-bottom: 1.5rem;
+            }
+            
+            .score-item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .score-label {
+                min-width: 80px;
+                font-weight: 600;
+                color: var(--text-light);
+            }
+            
+            .score-bar {
+                flex: 1;
+                height: 8px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+                overflow: hidden;
+                position: relative;
+            }
+            
+            .score-fill {
+                height: 100%;
+                background: var(--gradient-main);
+                border-radius: 4px;
+                transition: width 1s ease;
+                box-shadow: var(--glow-blue);
+            }
+            
+            .score-value {
+                min-width: 60px;
+                text-align: right;
+                font-weight: 600;
+                color: var(--cyber-blue);
+                text-shadow: 0 0 5px var(--cyber-blue);
+            }
+            
+            .review-text {
+                margin-bottom: 1.5rem;
+                line-height: 1.8;
+            }
+            
+            .review-text p {
+                margin-bottom: 1rem;
+                color: rgba(224, 224, 255, 0.9);
+            }
+            
+            .review-text strong {
+                color: var(--neon-pink);
+                text-shadow: 0 0 5px var(--neon-pink);
+            }
+            
+            .review-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 1rem;
+                border-top: 1px solid rgba(0, 245, 255, 0.2);
+                font-size: 0.9rem;
+                color: rgba(224, 224, 255, 0.7);
+            }
+            
+            .reviewer {
+                font-weight: 600;
+                color: var(--cyber-blue);
+            }
+            
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .reviews-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .filter-buttons {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .search-bar {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .search-bar input {
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
