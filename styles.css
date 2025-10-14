@@ -46,4 +46,469 @@ body::before {
 }
 
 @keyframes gridMove {
-    0% { 
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+/* Floating Neon Particles */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(57, 255, 20, 0.1) 0%, transparent 50%);
+    z-index: -1;
+    animation: particleFloat 15s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translateX(0) translateY(0) rotate(0deg); }
+    33% { transform: translateX(-30px) translateY(-20px) rotate(120deg); }
+    66% { transform: translateX(30px) translateY(20px) rotate(240deg); }
+}
+
+/* Navigation with Neon Glow */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid var(--cyber-blue);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--glow-blue);
+}
+
+.nav-brand h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.8rem;
+    font-weight: 900;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: var(--glow-blue);
+    animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+    from { filter: brightness(1); }
+    to { filter: brightness(1.5); }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-main);
+    transition: width 0.3s ease;
+    box-shadow: var(--glow-pink);
+}
+
+.nav-links a:hover {
+    color: var(--cyber-blue);
+    text-shadow: var(--glow-blue);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section - Cyberpunk Style */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: 
+        radial-gradient(ellipse at center, rgba(0, 245, 255, 0.1) 0%, transparent 70%),
+        radial-gradient(ellipse at center, rgba(255, 0, 128, 0.1) 0%, transparent 70%);
+    background-size: 100% 100%;
+    animation: cyberPulse 4s ease-in-out infinite;
+}
+
+@keyframes cyberPulse {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.hero-content {
+    z-index: 2;
+    position: relative;
+}
+
+.hero-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 
+        0 0 10px var(--cyber-blue),
+        0 0 20px var(--cyber-blue),
+        0 0 30px var(--cyber-blue);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from { 
+        text-shadow: 
+            0 0 10px var(--cyber-blue),
+            0 0 20px var(--cyber-blue),
+            0 0 30px var(--cyber-blue);
+    }
+    to { 
+        text-shadow: 
+            0 0 15px var(--cyber-blue),
+            0 0 25px var(--cyber-blue),
+            0 0 35px var(--cyber-blue),
+            0 0 45px var(--neon-pink);
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: var(--cyber-blue);
+    text-shadow: 0 0 10px var(--cyber-blue);
+}
+
+.cta-button {
+    background: transparent;
+    border: 2px solid var(--cyber-blue);
+    color: var(--cyber-blue);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--glow-blue);
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--cyber-blue), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    background: var(--cyber-blue);
+    color: var(--dark-navy);
+    transform: translateY(-3px);
+    box-shadow: 
+        var(--glow-blue),
+        0 10px 25px rgba(0, 245, 255, 0.3);
+}
+
+/* Floating Elements - Cyber Style */
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    font-size: 2rem;
+    animation: cyberFloat 6s ease-in-out infinite;
+    text-shadow: var(--glow-pink);
+}
+
+.star-1 { top: 20%; left: 10%; animation-delay: 0s; color: var(--cyber-blue); }
+.star-2 { top: 30%; right: 15%; animation-delay: 1.5s; color: var(--neon-pink); }
+.star-3 { bottom: 30%; left: 20%; animation-delay: 3s; color: var(--electric-green); }
+.star-4 { bottom: 20%; right: 10%; animation-delay: 4.5s; color: var(--cyber-blue); }
+
+@keyframes cyberFloat {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg) scale(1);
+        text-shadow: var(--glow-blue);
+    }
+    50% { 
+        transform: translateY(-20px) rotate(180deg) scale(1.2);
+        text-shadow: var(--glow-pink);
+    }
+}
+
+/* Anime Cards - Cyberpunk Style */
+.anime-section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.anime-section h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: var(--glow-blue);
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.anime-card {
+    background: var(--gradient-card);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.anime-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-main);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.anime-card:hover::before {
+    opacity: 0.1;
+}
+
+.anime-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: var(--cyber-blue);
+    box-shadow: 
+        var(--glow-blue),
+        0 20px 40px rgba(0, 245, 255, 0.2);
+}
+
+.anime-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: var(--gradient-main);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: var(--glow-blue);
+    animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { box-shadow: var(--glow-blue); }
+    50% { box-shadow: var(--glow-pink); }
+}
+
+.anime-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    text-shadow: 0 0 10px var(--cyber-blue);
+}
+
+.anime-card p {
+    color: rgba(224, 224, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.rating {
+    font-size: 1.2rem;
+    text-shadow: var(--glow-pink);
+}
+
+/* Character Cards */
+.characters-section {
+    padding: 5rem 2rem;
+    background: rgba(26, 0, 51, 0.3);
+}
+
+.characters-section h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: var(--glow-pink);
+}
+
+.character-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.character-card {
+    background: var(--gradient-card);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.character-card:hover {
+    transform: scale(1.05) rotateY(5deg);
+    border-color: var(--electric-green);
+    box-shadow: 
+        var(--glow-green),
+        0 15px 30px rgba(57, 255, 20, 0.2);
+}
+
+.character-emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: var(--glow-green);
+    animation: charFloat 4s ease-in-out infinite;
+}
+
+@keyframes charFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.character-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    text-shadow: 0 0 10px var(--electric-green);
+}
+
+.character-card p {
+    color: rgba(224, 224, 255, 0.8);
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    background: var(--card-bg);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 2px solid var(--cyber-blue);
+    box-shadow: 0 -5px 20px rgba(0, 245, 255, 0.1);
+}
+
+.footer-content h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: var(--glow-blue);
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--cyber-blue);
+    border-radius: 0;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-links a:hover {
+    background: var(--cyber-blue);
+    color: var(--dark-navy);
+    box-shadow: var(--glow-blue);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .anime-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .character-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
