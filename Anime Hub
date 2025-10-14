@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World - Your Ultimate Anime Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>✨ Anime World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#anime">Top Anime</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Anime World</h1>
+            <p class="hero-subtitle">Discover your next favorite anime and dive into amazing stories!</p>
+            <button class="cta-button" onclick="exploreAnime()">Start Exploring 🌟</button>
+        </div>
+        
+        <div class="floating-elements">
+            <div class="star star-1">⭐</div>
+            <div class="star star-2">✨</div>
+            <div class="star star-3">🌟</div>
+            <div class="star star-4">💫</div>
+        </div>
+    </header>
+
+    <main>
+        <section id="anime" class="anime-section">
+            <h2>🔥 Top Anime Recommendations</h2>
+            <div class="anime-grid">
+                <div class="anime-card" data-anime="attack-on-titan">
+                    <div class="anime-image">
+                        <div class="anime-placeholder">⚔️</div>
+                    </div>
+                    <h3>Attack on Titan</h3>
+                    <p>Epic battle between humans and titans</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                
+                <div class="anime-card" data-anime="demon-slayer">
+                    <div class="anime-image">
+                        <div class="anime-placeholder">🗡️</div>
+                    </div>
+                    <h3>Demon Slayer</h3>
+                    <p>Beautiful animation meets gripping story</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                
+                <div class="anime-card" data-anime="one-piece">
+                    <div class="anime-image">
+                        <div class="anime-placeholder">🏴‍☠️</div>
+                    </div>
+                    <h3>One Piece</h3>
+                    <p>Epic pirate adventure that never ends</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                
+                <div class="anime-card" data-anime="naruto">
+                    <div class="anime-image">
+                        <div class="anime-placeholder">🥷</div>
+                    </div>
+                    <h3>Naruto</h3>
+                    <p>Ninja adventures and friendship bonds</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                
+                <div class="anime-card" data-anime="my-hero-academia">
+                    <div class="anime-image">
+                        <div class="anime-placeholder">🦸</div>
+                    </div>
+                    <h3>My Hero Academia</h3>
+                    <p>Superheroes in training</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                
+                <div class="anime-card" data-anime="spirited-away">
+                    <div class="anime-image">
+                        <div class="anime-placeholder">🐉</div>
+                    </div>
+                    <h3>Spirited Away</h3>
+                    <p>Studio Ghibli masterpiece</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="characters" class="characters-section">
+            <h2>👥 Popular Anime Characters</h2>
+            <div class="character-gallery">
+                <div class="character-card">
+                    <div class="character-emoji">🥷</div>
+                    <h3>Naruto Uzumaki</h3>
+                    <p>"I'm gonna be Hokage!"</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-emoji">⚔️</div>
+                    <h3>Eren Yeager</h3>
+                    <p>"I will destroy all the titans!"</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-emoji">🗡️</div>
+                    <h3>Tanjiro Kamado</h3>
+                    <p>"I will save my sister!"</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-emoji">🦸</div>
+                    <h3>Izuku Midoriya</h3>
+                    <p>"I will become a hero!"</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>🌟 Anime World</h3>
+            <p>Made with ❤️ for anime lovers everywhere</p>
+            <div class="social-links">
+                <a href="#" onclick="shareAnime()">📱 Share</a>
+                <a href="#" onclick="joinCommunity()">👥 Community</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
