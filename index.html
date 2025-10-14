@@ -3,120 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime World - Your Ultimate Anime Hub</title>
+    <title>About - Anime World</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero-section">
+    <header class="hero-section about-hero">
         <nav class="navbar">
             <div class="nav-brand">
                 <h1>✨ Anime World</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#anime">Top Anime</a></li>
-                <li><a href="#characters">Characters</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#anime">Top Anime</a></li>
+                <li><a href="index.html#characters">Characters</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         
         <div class="hero-content">
-            <h1 class="hero-title">Welcome to Anime World</h1>
-            <p class="hero-subtitle">Discover your next favorite anime and dive into amazing stories!</p>
-            <button class="cta-button" onclick="exploreAnime()">Start Exploring 🌟</button>
+            <h1 class="hero-title">About Anime World</h1>
+            <p class="hero-subtitle">Your Ultimate Cyberpunk Anime Hub</p>
         </div>
         
         <div class="floating-elements">
-            <div class="star star-1">⭐</div>
-            <div class="star star-2">✨</div>
-            <div class="star star-3">🌟</div>
-            <div class="star star-4">💫</div>
+            <div class="star star-1">⚡</div>
+            <div class="star star-2">🔥</div>
+            <div class="star star-3">💫</div>
+            <div class="star star-4">🌟</div>
         </div>
     </header>
 
     <main>
-        <section id="anime" class="anime-section">
-            <h2>🔥 Top Anime Recommendations</h2>
-            <div class="anime-grid">
-                <div class="anime-card" data-anime="attack-on-titan">
-                    <div class="anime-image">
-                        <div class="anime-placeholder">⚔️</div>
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-card mission-card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Our Mission</h3>
+                        <p>To create the most immersive anime experience with cutting-edge cyberpunk aesthetics. We combine the best of traditional anime culture with futuristic design to bring you something truly unique.</p>
                     </div>
-                    <h3>Attack on Titan</h3>
-                    <p>Epic battle between humans and titans</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                
-                <div class="anime-card" data-anime="demon-slayer">
-                    <div class="anime-image">
-                        <div class="anime-placeholder">🗡️</div>
+                    
+                    <div class="about-card story-card">
+                        <div class="card-icon">📖</div>
+                        <h3>Our Story</h3>
+                        <p>Born from a passion for anime and technology, Anime World started as a simple idea: what if we could make anime websites that look like they're from the future? Now we're building the ultimate anime community.</p>
                     </div>
-                    <h3>Demon Slayer</h3>
-                    <p>Beautiful animation meets gripping story</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                
-                <div class="anime-card" data-anime="one-piece">
-                    <div class="anime-image">
-                        <div class="anime-placeholder">🏴‍☠️</div>
+                    
+                    <div class="about-card vision-card">
+                        <div class="card-icon">🚀</div>
+                        <h3>Our Vision</h3>
+                        <p>To revolutionize how anime fans discover, discuss, and celebrate their favorite shows. We're creating a digital universe where anime meets cyberpunk aesthetics.</p>
                     </div>
-                    <h3>One Piece</h3>
-                    <p>Epic pirate adventure that never ends</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
                 </div>
-                
-                <div class="anime-card" data-anime="naruto">
-                    <div class="anime-image">
-                        <div class="anime-placeholder">🥷</div>
-                    </div>
-                    <h3>Naruto</h3>
-                    <p>Ninja adventures and friendship bonds</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                
-                <div class="anime-card" data-anime="my-hero-academia">
-                    <div class="anime-image">
-                        <div class="anime-placeholder">🦸</div>
-                    </div>
-                    <h3>My Hero Academia</h3>
-                    <p>Superheroes in training</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                
-                <div class="anime-card" data-anime="spirited-away">
-                    <div class="anime-image">
-                        <div class="anime-placeholder">🐉</div>
-                    </div>
-                    <h3>Spirited Away</h3>
-                    <p>Studio Ghibli masterpiece</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-            </div>
-        </section>
 
-        <section id="characters" class="characters-section">
-            <h2>👥 Popular Anime Characters</h2>
-            <div class="character-gallery">
-                <div class="character-card">
-                    <div class="character-emoji">🥷</div>
-                    <h3>Naruto Uzumaki</h3>
-                    <p>"I'm gonna be Hokage!"</p>
+                <div class="stats-section">
+                    <h2>Anime World Stats</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="500">0</div>
+                            <div class="stat-label">Anime Reviewed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="1000">0</div>
+                            <div class="stat-label">Happy Fans</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Featured Characters</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="24">0</div>
+                            <div class="stat-label">Hours Active</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="character-card">
-                    <div class="character-emoji">⚔️</div>
-                    <h3>Eren Yeager</h3>
-                    <p>"I will destroy all the titans!"</p>
+
+                <div class="team-section">
+                    <h2>Meet the Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-avatar">🎌</div>
+                            <h3>Cyber Otaku</h3>
+                            <p class="member-role">Founder & Anime Expert</p>
+                            <p class="member-bio">Passionate about bringing anime into the cyberpunk future. Loves Attack on Titan and anything with mechs.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar">⚡</div>
+                            <h3>Neon Ninja</h3>
+                            <p class="member-role">Design & Animation</p>
+                            <p class="member-bio">Creates the stunning visual effects and cyberpunk aesthetics. Inspired by Ghost in the Shell.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar">🔥</div>
+                            <h3>Digital Sensei</h3>
+                            <p class="member-role">Content & Reviews</p>
+                            <p class="member-bio">Writes detailed anime reviews and character analysis. Expert on shonen and seinen genres.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="character-card">
-                    <div class="character-emoji">🗡️</div>
-                    <h3>Tanjiro Kamado</h3>
-                    <p>"I will save my sister!"</p>
-                </div>
-                <div class="character-card">
-                    <div class="character-emoji">🦸</div>
-                    <h3>Izuku Midoriya</h3>
-                    <p>"I will become a hero!"</p>
+
+                <div class="values-section">
+                    <h2>Our Values</h2>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">🌟</div>
+                            <h4>Quality</h4>
+                            <p>We only feature the best anime with detailed reviews and analysis.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">🤝</div>
+                            <h4>Community</h4>
+                            <p>Building a welcoming space for all anime fans to connect and share.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">⚡</div>
+                            <h4>Innovation</h4>
+                            <p>Pushing the boundaries of what anime websites can look and feel like.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">🎯</div>
+                            <h4>Passion</h4>
+                            <p>Everything we do is driven by our love for anime and technology.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -129,10 +143,300 @@
             <div class="social-links">
                 <a href="#" onclick="shareAnime()">📱 Share</a>
                 <a href="#" onclick="joinCommunity()">👥 Community</a>
+                <a href="contact.html">📧 Contact</a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Animated counter for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = Math.floor(current);
+                }, 20);
+            });
+        }
+
+        // Trigger animation when page loads
+        window.addEventListener('load', () => {
+            setTimeout(animateCounters, 1000);
+        });
+
+        // Add active class styling
+        const style = document.createElement('style');
+        style.textContent = `
+            .nav-links a.active {
+                color: var(--cyber-blue) !important;
+                text-shadow: var(--glow-blue) !important;
+            }
+            .nav-links a.active::after {
+                width: 100% !important;
+            }
+            
+            .about-hero {
+                height: 60vh;
+                background: 
+                    radial-gradient(ellipse at 30% 20%, rgba(0, 245, 255, 0.15) 0%, transparent 50%),
+                    radial-gradient(ellipse at 70% 80%, rgba(255, 0, 128, 0.15) 0%, transparent 50%);
+            }
+            
+            .about-section {
+                padding: 5rem 2rem;
+                background: var(--dark-navy);
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .about-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-bottom: 5rem;
+            }
+            
+            .about-card {
+                background: var(--gradient-card);
+                border-radius: 20px;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid transparent;
+                transition: all 0.4s ease;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .about-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--gradient-main);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: -1;
+            }
+            
+            .about-card:hover {
+                transform: translateY(-10px);
+                border-color: var(--cyber-blue);
+                box-shadow: var(--glow-blue);
+            }
+            
+            .about-card:hover::before {
+                opacity: 0.1;
+            }
+            
+            .card-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                text-shadow: var(--glow-pink);
+                animation: iconBounce 3s ease-in-out infinite;
+            }
+            
+            @keyframes iconBounce {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+            
+            .about-card h3 {
+                font-family: 'Orbitron', monospace;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: var(--cyber-blue);
+                text-shadow: 0 0 10px var(--cyber-blue);
+            }
+            
+            .stats-section {
+                margin: 5rem 0;
+                text-align: center;
+            }
+            
+            .stats-section h2 {
+                font-family: 'Orbitron', monospace;
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+                background: var(--gradient-main);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-shadow: var(--glow-blue);
+            }
+            
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 2rem;
+            }
+            
+            .stat-item {
+                background: var(--gradient-card);
+                border-radius: 15px;
+                padding: 2rem;
+                border: 2px solid var(--cyber-blue);
+                transition: all 0.3s ease;
+            }
+            
+            .stat-item:hover {
+                transform: scale(1.05);
+                box-shadow: var(--glow-blue);
+            }
+            
+            .stat-number {
+                font-family: 'Orbitron', monospace;
+                font-size: 3rem;
+                font-weight: 900;
+                color: var(--cyber-blue);
+                text-shadow: var(--glow-blue);
+                margin-bottom: 0.5rem;
+            }
+            
+            .stat-label {
+                color: var(--text-light);
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .team-section {
+                margin: 5rem 0;
+            }
+            
+            .team-section h2 {
+                font-family: 'Orbitron', monospace;
+                font-size: 2.5rem;
+                text-align: center;
+                margin-bottom: 3rem;
+                background: var(--gradient-main);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-shadow: var(--glow-pink);
+            }
+            
+            .team-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+            
+            .team-member {
+                background: var(--gradient-card);
+                border-radius: 20px;
+                padding: 2rem;
+                text-align: center;
+                border: 2px solid transparent;
+                transition: all 0.4s ease;
+                position: relative;
+            }
+            
+            .team-member:hover {
+                transform: translateY(-10px) rotateY(5deg);
+                border-color: var(--electric-green);
+                box-shadow: var(--glow-green);
+            }
+            
+            .member-avatar {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+                text-shadow: var(--glow-green);
+                animation: memberPulse 4s ease-in-out infinite;
+            }
+            
+            @keyframes memberPulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+            }
+            
+            .team-member h3 {
+                font-family: 'Orbitron', monospace;
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+                color: var(--electric-green);
+                text-shadow: 0 0 10px var(--electric-green);
+            }
+            
+            .member-role {
+                color: var(--cyber-blue);
+                font-weight: 600;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .member-bio {
+                color: rgba(224, 224, 255, 0.8);
+                line-height: 1.6;
+            }
+            
+            .values-section {
+                margin: 5rem 0;
+            }
+            
+            .values-section h2 {
+                font-family: 'Orbitron', monospace;
+                font-size: 2.5rem;
+                text-align: center;
+                margin-bottom: 3rem;
+                background: var(--gradient-main);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-shadow: var(--glow-pink);
+            }
+            
+            .values-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+            
+            .value-item {
+                background: var(--gradient-card);
+                border-radius: 15px;
+                padding: 1.5rem;
+                text-align: center;
+                border: 2px solid transparent;
+                transition: all 0.3s ease;
+            }
+            
+            .value-item:hover {
+                transform: translateY(-5px);
+                border-color: var(--neon-pink);
+                box-shadow: var(--glow-pink);
+            }
+            
+            .value-icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                text-shadow: var(--glow-pink);
+            }
+            
+            .value-item h4 {
+                font-family: 'Orbitron', monospace;
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+                color: var(--neon-pink);
+                text-shadow: 0 0 10px var(--neon-pink);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
