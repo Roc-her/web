@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Anime World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section contact-hero">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>✨ Anime World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#anime">Top Anime</a></li>
+                <li><a href="index.html#characters">Characters</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Get In Touch</h1>
+            <p class="hero-subtitle">Connect with the Anime World Community</p>
+        </div>
+        
+        <div class="floating-elements">
+            <div class="star star-1">📧</div>
+            <div class="star star-2">💬</div>
+            <div class="star star-3">🌐</div>
+            <div class="star star-4">⚡</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="input-glow"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="input-glow"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a topic...</option>
+                                    <option value="anime-recommendation">Anime Recommendation</option>
+                                    <option value="review-request">Review Request</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="bug-report">Bug Report</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="input-glow"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell us about your favorite anime or what you'd like to discuss..."></textarea>
+                                <div class="input-glow"></div>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <div class="btn-glow"></div>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h2>Connect With Us</h2>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-info">
+                                    <h3>Email</h3>
+                                    <p>contact@animeworld.com</p>
+                                    <span>We respond within 24 hours</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">💬</div>
+                                <div class="method-info">
+                                    <h3>Discord</h3>
+                                    <p>AnimeWorld#1234</p>
+                                    <span>Join our community server</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">🐦</div>
+                                <div class="method-info">
+                                    <h3>Twitter</h3>
+                                    <p>@AnimeWorld</p>
+                                    <span>Latest anime news & updates</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">📱</div>
+                                <div class="method-info">
+                                    <h3>Instagram</h3>
+                                    <p>@animeworld_official</p>
+                                    <span>Anime art & behind-the-scenes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="reviews.html">📝 Submit a Review</a></li>
+                                <li><a href="about.html">👥 Join Our Team</a></li>
+                                <li><a href="#faq">❓ FAQ</a></li>
+                                <li><a href="#privacy">🔒 Privacy Policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="community-stats">
+                            <h3>Community Stats</h3>
+                            <div class="stats-row">
+                                <div class="stat">
+                                    <span class="stat-number">2.5K</span>
+                                    <span class="stat-label">Active Members</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">500+</span>
+                                    <span class="stat-label">Anime Discussed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How can I submit an anime for review?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>You can submit anime recommendations through our contact form or join our Discord server. We prioritize popular and trending anime, but we also consider unique and underrated series.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Do you accept guest reviews?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! We love community contributions. Submit your review through our contact form with the subject "Review Request" and we'll consider featuring it on our site.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How often do you update the site?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We update Anime World weekly with new reviews, character spotlights, and community features. Follow us on social media for real-time updates!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Can I collaborate with Anime World?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! We're always looking for content creators, artists, and anime enthusiasts to collaborate with. Contact us with your ideas!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>🌟 Anime World</h3>
+            <p>Made with ❤️ for anime lovers everywhere</p>
+            <div class="social-links">
+                <a href="#" onclick="shareAnime()">📱 Share</a>
+                <a href="#" onclick="joinCommunity()">👥 Community</a>
+                <a href="contact.html">📧 Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // Show success message
+            showNotification('Message sent successfully! 🎉 We\'ll get back to you soon!', 'success');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // FAQ toggle functionality
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = element.querySelector('.faq-icon');
+            
+            if (faqItem.classList.contains('active')) {
+                faqItem.classList.remove('active');
+                answer.style.maxHeight = '0';
+                icon.textContent = '+';
+            } else {
+                // Close other open FAQs
+                document.querySelectorAll('.faq-item.active').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = '0';
+                    item.querySelector('.faq-icon').textContent = '+';
+                });
+                
+                // Open current FAQ
+                faqItem.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.textContent = '−';
+            }
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            
+            // Style the notification
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--gradient-card);
+                color: var(--text-light);
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                border: 2px solid var(--cyber-blue);
+                box-shadow: var(--glow-blue);
+                z-index: 10000;
+                animation: slideInRight 0.5s ease;
+                font-weight: 600;
+                max-width: 300px;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.5s ease';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 500);
+            }, 5000);
+        }
+
+        // Add custom styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .contact-hero {
+                height: 60vh;
+                background: 
+                    radial-gradient(ellipse at 50% 20%, rgba(0, 245, 255, 0.15) 0%, transparent 50%),
+                    radial-gradient(ellipse at 50% 80%, rgba(255, 0, 128, 0.15) 0%, transparent 50%);
+            }
+            
+            .contact-section {
+                padding: 5rem 2rem;
+                background: var(--dark-navy);
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .contact-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                margin-bottom: 5rem;
+            }
+            
+            .contact-form-container h2,
+            .contact-info h2 {
+                font-family: 'Orbitron', monospace;
+                font-size: 2rem;
+                margin-bottom: 2rem;
+                background: var(--gradient-main);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-shadow: var(--glow-blue);
+            }
+            
+            .contact-form {
+                background: var(--gradient-card);
+                border-radius: 20px;
+                padding: 2rem;
+                border: 2px solid transparent;
+                position: relative;
+            }
+            
+            .contact-form:hover {
+                border-color: var(--cyber-blue);
+                box-shadow: var(--glow-blue);
+            }
+            
+            .form-group {
+                margin-bottom: 1.5rem;
+                position: relative;
+            }
+            
+            .form-group label {
+                display: block;
+                margin-bottom: 0.5rem;
+                color: var(--cyber-blue);
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 0.9rem;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                width: 100%;
+                background: rgba(255, 255, 255, 0.05);
+                border: 2px solid rgba(0, 245, 255, 0.3);
+                color: var(--text-light);
+                padding: 1rem;
+                border-radius: 10px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+                font-family: inherit;
+            }
+            
+            .form-group input:focus,
+            .form-group select:focus,
+            .form-group textarea:focus {
+                outline: none;
+                border-color: var(--cyber-blue);
+                box-shadow: var(--glow-blue);
+                background: rgba(255, 255, 255, 0.1);
+            }
+            
+            .form-group textarea {
+                resize: vertical;
+                min-height: 120px;
+            }
+            
+            .submit-btn {
+                background: transparent;
+                border: 2px solid var(--cyber-blue);
+                color: var(--cyber-blue);
+                padding: 1rem 2rem;
+                border-radius: 0;
+                cursor: pointer;
+                font-size: 1rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            .submit-btn:hover {
+                background: var(--cyber-blue);
+                color: var(--dark-navy);
+                transform: translateY(-2px);
+                box-shadow: var(--glow-blue);
+            }
+            
+            .contact-methods {
+                margin-bottom: 3rem;
+            }
+            
+            .contact-method {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 2rem;
+                padding: 1.5rem;
+                background: var(--gradient-card);
+                border-radius: 15px;
+                border: 2px solid transparent;
+                transition: all 0.3s ease;
+            }
+            
+            .contact-method:hover {
+                border-color: var(--electric-green);
+                box-shadow: var(--glow-green);
+                transform: translateX(10px);
+            }
+            
+            .method-icon {
+                font-size: 2.5rem;
+                text-shadow: var(--glow-pink);
+                animation: iconBounce 3s ease-in-out infinite;
+            }
+            
+            .method-info h3 {
+                font-family: 'Orbitron', monospace;
+                color: var(--electric-green);
+                text-shadow: 0 0 10px var(--electric-green);
+                margin-bottom: 0.3rem;
+            }
+            
+            .method-info p {
+                color: var(--text-light);
+                font-weight: 600;
+                margin-bottom: 0.3rem;
+            }
+            
+            .method-info span {
+                color: rgba(224, 224, 255, 0.7);
+                font-size: 0.9rem;
+            }
+            
+            .quick-links {
+                margin-bottom: 3rem;
+            }
+            
+            .quick-links h3 {
+                font-family: 'Orbitron', monospace;
+                color: var(--neon-pink);
+                text-shadow: 0 0 10px var(--neon-pink);
+                margin-bottom: 1rem;
+            }
+            
+            .quick-links ul {
+                list-style: none;
+            }
+            
+            .quick-links li {
+                margin-bottom: 0.8rem;
+            }
+            
+            .quick-links a {
+                color: var(--text-light);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.5rem;
+                border-radius: 8px;
+            }
+            
+            .quick-links a:hover {
+                color: var(--cyber-blue);
+                background: rgba(0, 245, 255, 0.1);
+                text-shadow: var(--glow-blue);
+            }
+            
+            .community-stats h3 {
+                font-family: 'Orbitron', monospace;
+                color: var(--cyber-blue);
+                text-shadow: 0 0 10px var(--cyber-blue);
+                margin-bottom: 1rem;
+            }
+            
+            .stats-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+            
+            .stat {
+                text-align: center;
+                padding: 1rem;
+                background: var(--gradient-card);
+                border-radius: 10px;
+                border: 2px solid var(--cyber-blue);
+            }
+            
+            .stat-number {
+                display: block;
+                font-family: 'Orbitron', monospace;
+                font-size: 1.5rem;
+                font-weight: 900;
+                color: var(--cyber-blue);
+                text-shadow: var(--glow-blue);
+                margin-bottom: 0.3rem;
+            }
+            
+            .stat-label {
+                font-size: 0.8rem;
+                color: rgba(224, 224, 255, 0.8);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .faq-section {
+                margin-top: 5rem;
+            }
+            
+            .faq-section h2 {
+                font-family: 'Orbitron', monospace;
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 3rem;
+                background: var(--gradient-main);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-shadow: var(--glow-pink);
+            }
+            
+            .faq-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .faq-item {
+                background: var(--gradient-card);
+                border-radius: 15px;
+                border: 2px solid transparent;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .faq-item:hover {
+                border-color: var(--neon-pink);
+                box-shadow: var(--glow-pink);
+            }
+            
+            .faq-question {
+                padding: 1.5rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: all 0.3s ease;
+            }
+            
+            .faq-question:hover {
+                background: rgba(255, 0, 128, 0.1);
+            }
+            
+            .faq-question h3 {
+                font-family: 'Orbitron', monospace;
+                color: var(--neon-pink);
+                text-shadow: 0 0 10px var(--neon-pink);
+                margin: 0;
+                font-size: 1.1rem;
+            }
+            
+            .faq-icon {
+                font-size: 1.5rem;
+                color: var(--neon-pink);
+                text-shadow: var(--glow-pink);
+                transition: transform 0.3s ease;
+            }
+            
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                background: rgba(255, 0, 128, 0.05);
+            }
+            
+            .faq-answer p {
+                padding: 1.5rem;
+                margin: 0;
+                color: rgba(224, 224, 255, 0.9);
+                line-height: 1.6;
+            }
+            
+            .faq-item.active .faq-question {
+                background: rgba(255, 0, 128, 0.1);
+            }
+            
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .contact-grid {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                }
+                
+                .faq-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .stats-row {
+                    grid-template-columns: 1fr;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
